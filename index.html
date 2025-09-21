@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illusion Gallery: A Pure HTML/CSS Museum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Illusion Gallery</h1>
+        <p>Step into this unique web experience, a quirky museum built entirely with HTML and CSS. Prepare to trick your brain as we showcase how simple styling and careful layout can manipulate perception.</p>
+        <nav>
+            <ul>
+                <li><a href="#lines">Lines</a></li>
+                <li><a href="#patterns">Patterns</a></li>
+                <li><a href="#shapes">Shapes</a></li>
+                <li><a href="#impossible-objects">Impossible Objects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lines" class="gallery-section">
+            <h2>Lines</h2>
+            <div class="illusion-exhibit">
+                <h3>Müller-Lyer Illusion</h3>
+                <p>Two straight lines of equal length appear different due to the direction of the arrowheads at their ends. Which line looks longer?</p>
+                <div class="muller-lyer-container">
+                    <div class="muller-lyer-line in"><span class="arrows-right"></span></div>
+                    <div class="muller-lyer-line out"><span class="arrows-right"></span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="patterns" class="gallery-section">
+            <h2>Patterns</h2>
+            <div class="illusion-exhibit">
+                <h3>Café Wall Illusion</h3>
+                <p>Parallel lines appear to slant due to the staggered arrangement of alternating dark and light tiles. Notice how the horizontal lines seem to bend.</p>
+                <div class="cafe-wall-container">
+                    <div class="cafe-row odd">
+                        <div class="tile black"></div><div class="tile white"></div><div class="tile black"></div><div class="tile white"></div><div class="tile black"></div><div class="tile white"></div><div class="tile black"></div>
+                    </div>
+                    <div class="cafe-row even">
+                        <div class="tile white"></div><div class="tile black"></div><div class="tile white"></div><div class="tile black"></div><div class="tile white"></div><div class="tile black"></div><div class="tile white"></div>
+                    </div>
+                    <div class="cafe-row odd">
+                        <div class="tile black"></div><div class="tile white"></div><div class="tile black"></div><div class="tile white"></div><div class="tile black"></div><div class="tile white"></div><div class="tile black"></div>
+                    </div>
+                    <div class="cafe-row even">
+                        <div class="tile white"></div><div class="tile black"></div><div class="tile white"></div><div class="tile black"></div><div class="tile white"></div><div class="tile black"></div><div class="tile white"></div>
+                    </div>
+                    <div class="cafe-row odd">
+                        <div class="tile black"></div><div class="tile white"></div><div class="tile black"></div><div class="tile white"></div><div class="tile black"></div><div class="tile white"></div><div class="tile black"></div>
+                    </div>
+                    <div class="cafe-row even">
+                        <div class="tile white"></div><div class="tile black"></div><div class="tile white"></div><div class="tile black"></div><div class="tile white"></div><div class="tile black"></div><div class="tile white"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="shapes" class="gallery-section">
+            <h2>Shapes</h2>
+            <div class="illusion-exhibit">
+                <h3>Rubin Vase</h3>
+                <p>Do you see a vase, or two faces in profile looking at each other? This classic figure-ground illusion demonstrates how our perception can alternate between two distinct images.</p>
+                <div class="rubin-vase-container"></div>
+            </div>
+
+            <div class="illusion-exhibit">
+                <h3>Kanizsa Triangle</h3>
+                <p>Your brain perceives a white, equilateral triangle in the center, even though it's not explicitly drawn. It's formed by the arrangement of three "pac-man" shapes and three angled lines.</p>
+                <div class="kanizsa-triangle-container">
+                    <div class="pacman top-left"></div>
+                    <div class="pacman top-right"></div>
+                    <div class="pacman bottom"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impossible-objects" class="gallery-section">
+            <h2>Impossible Objects</h2>
+            <div class="illusion-exhibit">
+                <h3>Impossible Penrose Stairs</h3>
+                <p>This structure appears to be a staircase that ascends or descends infinitely, an endless loop that defies the laws of three-dimensional geometry. While a perfect 3D representation is complex in pure CSS, observe how the lines suggest an impossible continuity.</p>
+                <div class="penrose-stairs-container">
+                    <div class="step step1"></div>
+                    <div class="step step2"></div>
+                    <div class="step step3"></div>
+                    <div class="step step4"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Illusion Gallery. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
