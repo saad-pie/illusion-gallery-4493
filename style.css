@@ -1,0 +1,419 @@
+:root {
+    --primary-bg: #f8f8f8;
+    --text-color: #333;
+    --border-color: #ddd;
+    --accent-color: #007bff;
+    --illusion-bg: #fff;
+}
+
+body {
+    font-family: Georgia, serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header, main, footer {
+    width: 100%;
+    max-width: 960px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: bold;
+    padding: 8px 15px;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.gallery-section {
+    margin-bottom: 60px;
+    padding-top: 20px;
+}
+
+.illusion-exhibit {
+    background-color: var(--illusion-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.illusion-exhibit p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+    color: #666;
+}
+
+.muller-lyer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.muller-lyer-line {
+    width: 200px;
+    height: 2px;
+    background-color: var(--text-color);
+    position: relative;
+    margin: 20px 0;
+    display: block;
+}
+
+.muller-lyer-line::before, .muller-lyer-line::after,
+.muller-lyer-line span::before, .muller-lyer-line span::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: var(--text-color);
+}
+
+/* Left side arrows for 'in' */
+.muller-lyer-line.in::before { /* Left-top */
+    left: 0;
+    transform-origin: right center;
+    transform: rotate(-45deg) translateX(-15px);
+}
+.muller-lyer-line.in::after { /* Left-bottom */
+    left: 0;
+    transform-origin: right center;
+    transform: rotate(45deg) translateX(-15px);
+}
+
+/* Left side arrows for 'out' */
+.muller-lyer-line.out::before { /* Left-top */
+    left: 0;
+    transform-origin: left center;
+    transform: rotate(45deg) translateX(-5px);
+}
+.muller-lyer-line.out::after { /* Left-bottom */
+    left: 0;
+    transform-origin: left center;
+    transform: rotate(-45deg) translateX(-5px);
+}
+
+/* Span to hold right side arrows */
+.muller-lyer-line .arrows-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Right side arrows for 'in' */
+.muller-lyer-line.in .arrows-right::before { /* Right-top */
+    right: 0;
+    transform-origin: left center;
+    transform: rotate(45deg) translateX(15px);
+}
+.muller-lyer-line.in .arrows-right::after { /* Right-bottom */
+    right: 0;
+    transform-origin: left center;
+    transform: rotate(-45deg) translateX(15px);
+}
+
+/* Right side arrows for 'out' */
+.muller-lyer-line.out .arrows-right::before { /* Right-top */
+    right: 0;
+    transform-origin: right center;
+    transform: rotate(-45deg) translateX(5px);
+}
+.muller-lyer-line.out .arrows-right::after { /* Right-bottom */
+    right: 0;
+    transform-origin: right center;
+    transform: rotate(45deg) translateX(5px);
+}
+
+.cafe-wall-container {
+    width: 350px;
+    margin: 40px auto;
+    border: 2px solid #555;
+    background-color: #eee;
+    padding: 5px 0;
+    box-sizing: border-box;
+}
+
+.cafe-row {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.cafe-row.even {
+    margin-left: 25px;
+}
+
+.tile {
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+.tile.black {
+    background-color: #333;
+}
+
+.tile.white {
+    background-color: #fff;
+}
+
+.rubin-vase-container {
+    width: 250px;
+    height: 300px;
+    position: relative;
+    margin: 40px auto;
+    background-color: #333;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.rubin-vase-container::before,
+.rubin-vase-container::after {
+    content: '';
+    position: absolute;
+    background-color: var(--primary-bg);
+    width: 100px;
+    height: 200px;
+    top: 50px;
+    border-radius: 50%;
+}
+
+.rubin-vase-container::before {
+    left: -50px;
+}
+
+.rubin-vase-container::after {
+    right: -50px;
+}
+
+.kanizsa-triangle-container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 40px auto;
+}
+
+.pacman {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    border-radius: 50%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 50%, 0% 50%);
+}
+
+.pacman.top-left {
+    top: 0;
+    left: 0;
+    transform: rotate(225deg);
+}
+
+.pacman.top-right {
+    top: 0;
+    right: 0;
+    transform: rotate(315deg);
+}
+
+.pacman.bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.penrose-stairs-container {
+    width: 200px;
+    height: 200px;
+    margin: 40px auto;
+    position: relative;
+    transform: rotate(-15deg);
+    border: 1px solid #ccc;
+}
+
+.step {
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    background-color: #666;
+    border: 1px solid #444;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.step1 {
+    bottom: 50px;
+    left: 50px;
+    background-color: #555;
+    z-index: 4;
+}
+
+.step2 {
+    top: 50px;
+    right: 50px;
+    width: 20px;
+    height: 80px;
+    background-color: #777;
+    z-index: 3;
+}
+
+.step3 {
+    top: 50px;
+    left: 50px;
+    background-color: #999;
+    z-index: 2;
+}
+
+.step4 {
+    bottom: 50px;
+    left: 50px;
+    width: 20px;
+    height: 80px;
+    background-color: #bbb;
+    z-index: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+    border-top: 1px solid var(--border-color);
+    color: #777;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    header, main, footer {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cafe-wall-container {
+        width: 100%;
+    }
+    .cafe-row.even {
+        margin-left: 10px;
+    }
+    .tile {
+        width: 40px;
+        height: 40px;
+    }
+    .muller-lyer-line {
+        width: 150px;
+    }
+    .rubin-vase-container, .kanizsa-triangle-container, .penrose-stairs-container {
+        width: 200px;
+        height: 250px;
+    }
+    .rubin-vase-container {
+        height: 250px;
+    }
+    .rubin-vase-container::before, .rubin-vase-container::after {
+        width: 80px;
+        height: 160px;
+        top: 45px;
+    }
+    .rubin-vase-container::before {
+        left: -40px;
+    }
+    .rubin-vase-container::after {
+        right: -40px;
+    }
+    .pacman {
+        width: 80px;
+        height: 80px;
+    }
+    .pacman.top-left,
+    .pacman.top-right {
+        transform: rotate(225deg);
+    }
+    .pacman.bottom {
+        transform: translateX(-50%) rotate(90deg);
+    }
+    .penrose-stairs-container {
+        width: 150px;
+        height: 150px;
+    }
+    .step {
+        width: 60px;
+        height: 15px;
+    }
+    .step1 { bottom: 40px; left: 40px; }
+    .step2 { top: 40px; right: 40px; width: 15px; height: 60px; }
+    .step3 { top: 40px; left: 40px; }
+    .step4 { bottom: 40px; left: 40px; width: 15px; height: 60px; }
+}
